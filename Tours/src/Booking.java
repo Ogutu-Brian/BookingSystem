@@ -1,16 +1,18 @@
 /*
+NAME: GOPPI CHATTI
+STUDENT ID: 12095772
 FILE_NAME: Bookng.java
 DATE: 26/01/2019
 PURPOSE:Blueprint for booking objects
 */
 class Booking {
-    //variable 
+    // variable
     private String bookingName;
-    //variable for the number of passenger
+    // variable for the number of passenger
     private int passengers;
-    ///unit charge price per person
+    /// unit charge price per person
     private final double UNIT_CHARGE = 85.50;
-    //Constants for percentage discounts
+    // Constants for percentage discounts
     private final double DISCOUNT_1 = 0.0;
     private final double DISCOUNT_2 = 0.10;
     private final double DISCOUNT_3 = 0.15;
@@ -26,8 +28,8 @@ class Booking {
         this.passengers = passengers;
     }
 
-    //Sets the booking name
-    public void setBookingName(String bookingName,int passengers){
+    // Sets the booking name
+    public void setBookingName(String bookingName, int passengers) {
         this.bookingName = bookingName;
         this.passengers = passengers;
     }
@@ -41,6 +43,7 @@ class Booking {
     public int getPassengers() {
         return passengers;
     }
+
     public String getBookingName() {
         return bookingName;
     }
@@ -58,7 +61,7 @@ class Booking {
         } else {
             discount = DISCOUNT_4;
         }
-        double totalCharge = passengers*UNIT_CHARGE;
+        double totalCharge = passengers * UNIT_CHARGE;
         double deduction = discount * totalCharge;
         return totalCharge - deduction;
     }
